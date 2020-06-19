@@ -1,4 +1,3 @@
-# SAPUI5-Fiori-Dashboard
 <h1 align="center">SAPUI5 - Fiori App - Dashboard 👋</h1>
 
 <p align="center">
@@ -36,14 +35,16 @@ This project was developed at the **Master Class** by [Rievo](https://rievo.com.
 
 **Server (HANA Platform):**
 
-<img alt="hana" src="https://img.shields.io/badge/HANA-NEO-brightgreen" /> <img alt="celebrate" src="https://img.shields.io/badge/celebrate-^12.1.1-brightgreen" /> <img alt="cors" src="https://img.shields.io/badge/cors-^2.8.5-brightgreen" /> <img alt="hana-db" src="https://img.shields.io/badge/HANA-DB-brightgreen" />
+<img alt="neo" src="https://img.shields.io/badge/Cloud-NEO-brightgreen" /> <img alt="hana-db" src="https://img.shields.io/badge/HANA-DB-brightgreen" />
 
 <br/>
 <br/>
 
-**Web (ReactJS):**
+**Web (SAP Web IDE):**
   
-<img alt="axios" src="https://img.shields.io/badge/axios-^0.19.2-blue" /> <img alt="axios" src="https://img.shields.io/badge/leaflet-^1.6.0-blue" /> <img alt="axios" src="https://img.shields.io/badge/react-^16.13.1-blue" /> <img alt="axios" src="https://img.shields.io/badge/react--dom-^16.13.1-blue" /> <img alt="axios" src="https://img.shields.io/badge/react--dropzone-^11.0.1-blue" /> <img alt="axios" src="https://img.shields.io/badge/react--icons-^3.10.0-blue" /> <img alt="axios" src="https://img.shields.io/badge/react--leaflet-^2.7.0-blue" /> <img alt="axios" src="https://img.shields.io/badge/react--router--dom-^5.2.0-blue" /> <img alt="axios" src="https://img.shields.io/badge/react--scripts-3.4.1-blue" /> <img alt="axios" src="https://img.shields.io/badge/typescript-^3.7.5-blue" />
+<img alt="ide" src="https://img.shields.io/badge/IDE-SAP Web-blue" /> <img alt="odata" src="https://img.shields.io/badge/Protocol-oData-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.ui.core.mvc-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.m-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.f-blue" />
+<img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.ui.layout-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.suite.ui.microchart-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.suite.ui.commons-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.viz.ui5.controls-blue" /> <img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.viz.ui5.data-blue" />
+<img alt="sapui5" src="https://img.shields.io/badge/sapui5-sap.viz.ui5.controls.common.feeds-blue" />
 
 <br/>
 <br/>
@@ -56,16 +57,17 @@ Create account in the [SAP Cloud Platform](https://account.hana.ondemand.com/#/h
 ```bash
 # Clone this repository
 $ git clone https://github.com/DavidsonIzefler/SAPUI5-Fiori-Dashboard.git
-
+```
 # For folder @database 
-Export all files for your local machine
-After create HANA MDC Database
-Run the scripts to 
--> Tabelas.txt to generate tables
--> Views.txt to generate views
--> Carga.txt to populate tables and views
+## Export all files for your local machine
 
-Then add the profiles in the database at SYSTEM user
+ - After create HANA MDC Database
+ - Run the scripts below:  
+1 -> Tabelas.txt to generate tables
+2 -> Views.txt to generate views
+3 -> Carga.txt to populate tables and views
+
+## Then adding the profiles in the database at SYSTEM user
  - sap.hana.admin.roles::Administrator
  - sap.hana.ide.roles::CatalogDeveloper
  - sap.hana.ide.roles::SecurityAdmin
@@ -74,19 +76,18 @@ Then add the profiles in the database at SYSTEM user
  - sap.hana.xs.ide.roles::Developer
  - sap.hana.xs.ide.roles::EditorDeveloper
 
-Then create three files in the Editor composer of "SAP HANA Web Based Development Wrokbeanch: Editor"
+## Then create three files in the Editor composer of "SAP HANA Web Based Development Wrokbeanch: Editor"
  - Create package Dashboard 
  - Import the file .xsapp
  - Import the file .xsaccess 
  - Import the file dashboard.xsodata
 
-After all these task run the file dashboard.xsodata 
+### After all these task run the file dashboard.xsodata 
 
 # For web project (SAP Web IDE)
   1) Go to services in the SAP Cloud Platform
   2) Start the service SAP Web IDE Full Stack
   3) Import the project that has been cloned from Git
-```
 
 ## Author
 
