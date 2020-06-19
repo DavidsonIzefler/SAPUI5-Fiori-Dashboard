@@ -1,0 +1,76 @@
+CREATE COLUMN TABLE "SYSTEM"."SalesRegion"( 
+    "RegionID" NVARCHAR(3), 
+    "Region" NVARCHAR(15), 
+    "MesID" INTEGER, 
+    "Mes" NVARCHAR(3), 
+    "Revenue" DECIMAL, 
+    "Cost" DECIMAL, 
+    PRIMARY KEY ( 
+        "RegionID", 
+        "MesID" 
+    ) 
+); 
+
+COMMENT ON COLUMN "SYSTEM"."SalesRegion"."RegionID" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesRegion"."Region" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesRegion"."MesID" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesRegion"."Mes" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesRegion"."Revenue" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesRegion"."Cost" is ' '; 
+
+CREATE COLUMN TABLE "SYSTEM"."SalesCategory"(
+    "CategoryID" NVARCHAR(3),
+    "Category" NVARCHAR(20),
+    "MesID" INTEGER, 
+    "Mes" NVARCHAR(3),
+    "Revenue" DECIMAL,
+    "Cost" DECIMAL,
+    PRIMARY KEY (
+        "CategoryID"
+    )
+);
+
+COMMENT ON COLUMN "SYSTEM"."SalesCategory"."CategoryID" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesCategory"."Category" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesCategory"."MesID" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesCategory"."Mes" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesCategory"."Revenue" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesCategory"."Cost" is ' ';
+
+CREATE COLUMN TABLE "SYSTEM"."SalesProducts"(
+    "ProductID" NVARCHAR(3),
+    "Product" NVARCHAR(15),
+    "CategoryID" NVARCHAR(3),
+    "MesID" INTEGER, 
+    "Mes" NVARCHAR(3),
+    "Revenue" DECIMAL,
+    "Cost" DECIMAL,
+    PRIMARY KEY (
+        "ProductID"
+    )
+);
+
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."ProductID" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."Product" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."CategoryID" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."MesID" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."Mes" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."Revenue" is ' ';
+COMMENT ON COLUMN "SYSTEM"."SalesProducts"."Cost" is ' ';
+
+CREATE COLUMN TABLE "SYSTEM"."SalesQuarter"( 
+"Quarter" NVARCHAR(3), 
+"Revenue" DECIMAL, 
+"Cost" DECIMAL, 
+"Target" DECIMAL, 
+"Deviation" DECIMAL, 
+PRIMARY KEY ( 
+"Quarter" 
+) 
+); 
+
+COMMENT ON COLUMN "SYSTEM"."SalesQuarter"."Quarter" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesQuarter"."Revenue" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesQuarter"."Cost" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesQuarter"."Target" is ' '; 
+COMMENT ON COLUMN "SYSTEM"."SalesQuarter"."Deviation" is ' '; 

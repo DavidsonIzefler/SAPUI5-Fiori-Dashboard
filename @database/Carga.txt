@@ -1,0 +1,80 @@
+-- Carga Tabela SalesRegion
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',1,'Jan',1908, 762);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',1,'Jan',2357, 152);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',1,'Jan',7778, 507);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',1,'Jan',9898.45, 219);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',1,'Jan',1975.82, 100);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',2,'Fev',7380, 276);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',2,'Fev',2389, 999);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',2,'Fev',7489.88, 890.88);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',2,'Fev',8829, 234.88);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',2,'Fev',7484, 229);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',3,'Mar',1728, 889);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',3,'Mar',8277, 332);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',3,'Mar',8373, 200.99);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',3,'Mar',8892.88, 727.90);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',3,'Mar',9982, 10926);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',4,'Abr',2892, 448);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',4,'Abr',8920, 883);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',4,'Abr',123, 588);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',4,'Abr',8393, 9900);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',4,'Abr',7282, 745);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',5,'Mai',7179, 811.33);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',5,'Mai',7283, 9977.90);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',5,'Mai',3245, 112);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',5,'Mai',6252.77, 223.45);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',5,'Mai',6367, 2238.77);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',6,'Jun',8172, 778);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',6,'Jun',7803, 993);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',6,'Jun',5762, 7889);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',6,'Jun',7389, 998);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',6,'Jun',7369, 8800.42);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',7,'Jul',7367, 8892);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',7,'Jul',7276, 122);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',7,'Jul',8837, 1100);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',7,'Jul',8893.99, 3388);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',7,'Jul',7278.99, 2299);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',8,'Ago',2887, 3388);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',8,'Ago',2838, 899);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',8,'Ago', 8889.66, 287.33);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',8,'Ago',2887, 8827);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',8,'Ago',2772, 100.22);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',9,'Set',1827, 273);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',9,'Set',8892, 287.88);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',9,'Set',7782, 2200);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',9,'Set',637.3, 1162);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',9,'Set',6629.22, 100.22);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',10,'Out',7278.54, 777.22);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',10,'Out',6252, 22.09);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',10,'Out',9827.88, 7777.76);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',10,'Out',123.66, 10928.99);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',10,'Out',1827, 9972.22);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',11,'Nov',1726, 222.11);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',11,'Nov',892.92, 728.98);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',11,'Nov',772.77, 890);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',11,'Nov',7289, 272.99);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',11,'Nov',728.99, 182.99);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NOR','Norte',12,'Dez',2271.88, 123);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('NDT','Nordeste',12,'Dez',8829.99, 362.94);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('CEN','Centro Oeste',12,'Dez',8726.50, 1288.87);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUL','Sul',12,'Dez',2283.45, 7289.94);
+INSERT INTO "SYSTEM"."SalesRegion" VALUES('SUD','Sudeste',12,'Dez',8370.82, 1122.33);
+
+
+-- Carga Tabela SalesCategory
+INSERT INTO "SYSTEM"."SalesCategory" VALUES('AGR','Agro Negócio',12,'Dez',192600.88, 76890);
+INSERT INTO "SYSTEM"."SalesCategory" VALUES('SID','Siderurgia',12,'Dez',23788, 152768.94);
+INSERT INTO "SYSTEM"."SalesCategory" VALUES('TPU','Transporte Público',12,'Dez',102789.50, 50758);
+
+-- Carga Tabela SalesProducts
+INSERT INTO "SYSTEM"."SalesProducts" VALUES('ARR','Arrendamento','AGR',12,'Dez',1258, 3567.99);
+INSERT INTO "SYSTEM"."SalesProducts" VALUES('CEN','Fundição Ferro','SID',12,'Dez',6582, 17892.99);
+INSERT INTO "SYSTEM"."SalesProducts" VALUES('PMI','Prod. Minério','SID',12,'Dez',5494, 2888.94);
+INSERT INTO "SYSTEM"."SalesProducts" VALUES('LVE','Loc. Veículos','TPU',12,'Dez',5189, 24837.99);
+INSERT INTO "SYSTEM"."SalesProducts" VALUES('PEU','Prod. Eucalipto','AGR',12,'Dez',10292, 45873.76);
+
+-- Carga Tabela SalesQuarter
+INSERT INTO "SYSTEM"."SalesQuarter" VALUES('PRI', 2.29, 1.5,3.92,-41.58); 
+INSERT INTO "SYSTEM"."SalesQuarter" VALUES('SEG', 3.91, 1.92,3.05,28.19); 
+INSERT INTO "SYSTEM"."SalesQuarter" VALUES('TER', 2.13, 1.92,2.54,-16.14); 
+INSERT INTO "SYSTEM"."SalesQuarter" VALUES('QUA', 4.06, 2.23,2.32,75); 

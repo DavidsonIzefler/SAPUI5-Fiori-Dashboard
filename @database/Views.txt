@@ -1,0 +1,20 @@
+create view "SYSTEM"."VW_SalesCategory" as
+SELECT "SYSTEM"."SalesCategory"."Category", "SYSTEM"."SalesCategory"."Revenue", 
+("SYSTEM"."SalesCategory"."Revenue"  / (select sum("SYSTEM"."SalesCategory"."Revenue") FROM "SYSTEM"."SalesCategory")) * 100 Pct_To_Total
+FROM "SYSTEM"."SalesCategory";
+
+
+create view "SYSTEM"."VW_TopRevenueProducts" as 
+SELECT top 3 * from "SYSTEM"."SalesProducts" order by "SYSTEM"."SalesProducts"."Revenue" desc;
+
+create view "SYSTEM"."VW_SalesRegion" as
+SELECT * from "SYSTEM"."SalesRegion" where "SYSTEM"."SalesRegion"."Mes" = 'Jun';
+
+create view "SYSTEM"."VW_SalesReport" as
+select "SYSTEM"."SalesRegion"."MesID","SYSTEM"."SalesRegion"."Mes", sum("SYSTEM"."SalesRegion"."Revenue") TOT_Rev, 
+                                        sum("SYSTEM"."SalesRegion"."Cost")  TOT_Cost, 
+                                        avg("SYSTEM"."SalesRegion"."Revenue") AVG_Rev 
+from "SYSTEM"."SalesRegion" 
+group by "SYSTEM"."SalesRegion"."MesID","SYSTEM"."SalesRegion"."Mes"; 
+
+

@@ -1,0 +1,14 @@
+{
+    "exposed" : true,
+    "authentication" : [ { "method" : "Basic" } ],
+        "force_ssl": false,
+        "enable_etags": true,
+        "prevent_xsrf": false,
+        "anonymous_connection": null,
+        "cors": [{
+            "enabled":true,
+            "allowMethods": ["GET","POST","PUT"],
+            "allowOrigin": ["*"],
+            "maxAge":"3600"
+        }]
+}

@@ -1,0 +1,7 @@
+service {
+"SYSTEM"."VW_SalesCategory" as "VW_SalesCategory" keys("Category");
+"SYSTEM"."VW_TopRevenueProducts" as "VW_TopRevenueProducts" keys("ProductID","CategoryID");
+"SYSTEM"."VW_SalesRegion" as "VW_SalesRegion" keys("RegionID");
+"SYSTEM"."VW_SalesReport" as "VW_SalesReport" keys("MesID");
+"SYSTEM"."SalesQuarter" as "SalesQuarter";
+}
