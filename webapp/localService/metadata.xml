@@ -1,0 +1,19 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="dashboard.dashboard">
+			<EntityType Name="VW_SalesCategoryType">
+				<Key><PropertyRef Name="Category"/></Key><Property Name="Category" Type="Edm.String" Nullable="false" MaxLength="20"/><Property Name="Revenue" Type="Edm.Decimal" Precision="34"/><Property Name="PCT_TO_TOTAL" Type="Edm.Decimal" Precision="34"/></EntityType>
+			<EntityType Name="VW_TopRevenueProductsType">
+				<Key><PropertyRef Name="ProductID"/><PropertyRef Name="CategoryID"/></Key><Property Name="ProductID" Type="Edm.String" Nullable="false" MaxLength="3"/><Property Name="Product" Type="Edm.String" MaxLength="15"/><Property Name="CategoryID" Type="Edm.String" Nullable="false" MaxLength="3"/><Property Name="MesID" Type="Edm.Int32"/><Property Name="Mes" Type="Edm.String" MaxLength="3"/><Property Name="Revenue" Type="Edm.Decimal" Precision="34"/><Property Name="Cost" Type="Edm.Decimal" Precision="34"/></EntityType>
+			<EntityType Name="VW_SalesRegionType">
+				<Key><PropertyRef Name="RegionID"/></Key><Property Name="RegionID" Type="Edm.String" Nullable="false" MaxLength="3"/><Property Name="Region" Type="Edm.String" MaxLength="15"/><Property Name="MesID" Type="Edm.Int32" Nullable="false"/><Property Name="Mes" Type="Edm.String" Nullable="false" MaxLength="3"/><Property Name="Revenue" Type="Edm.Decimal" Precision="34"/><Property Name="Cost" Type="Edm.Decimal" Precision="34"/></EntityType>
+			<EntityType Name="VW_SalesReportType">
+				<Key><PropertyRef Name="MesID"/></Key><Property Name="MesID" Type="Edm.Int32" Nullable="false"/><Property Name="Mes" Type="Edm.String" MaxLength="3"/><Property Name="TOT_REV" Type="Edm.Decimal" Precision="34"/><Property Name="TOT_COST" Type="Edm.Decimal" Precision="34"/><Property Name="AVG_REV" Type="Edm.Decimal" Precision="34"/></EntityType>
+			<EntityType Name="SalesQuarterType">
+				<Key><PropertyRef Name="Quarter"/></Key><Property Name="Quarter" Type="Edm.String" Nullable="false" MaxLength="3"/><Property Name="Revenue" Type="Edm.Decimal" Precision="34"/><Property Name="Cost" Type="Edm.Decimal" Precision="34"/><Property Name="Target" Type="Edm.Decimal" Precision="34"/><Property Name="Deviation" Type="Edm.Decimal" Precision="34"/></EntityType>
+			<EntityContainer Name="dashboard" m:IsDefaultEntityContainer="true"><EntitySet Name="VW_SalesCategory" EntityType="dashboard.dashboard.VW_SalesCategoryType"/><EntitySet Name="VW_TopRevenueProducts" EntityType="dashboard.dashboard.VW_TopRevenueProductsType"/><EntitySet Name="VW_SalesRegion" EntityType="dashboard.dashboard.VW_SalesRegionType"/><EntitySet Name="VW_SalesReport" EntityType="dashboard.dashboard.VW_SalesReportType"/><EntitySet Name="SalesQuarter" EntityType="dashboard.dashboard.SalesQuarterType"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

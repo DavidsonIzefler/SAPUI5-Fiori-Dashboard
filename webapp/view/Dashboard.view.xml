@@ -1,0 +1,111 @@
+<mvc:View 
+	controllerName="br.com.dashboard.SalesDashboard.controller.Dashboard" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true"
+	xmlns="sap.m" 
+	xmlns:f="sap.f" 
+	xmlns:layout="sap.ui.layout" 
+	xmlns:chart="sap.suite.ui.microchart"
+	xmlns:commons="sap.suite.ui.commons"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:data="sap.viz.ui5.data"
+	xmlns:feeds="sap.viz.ui5.controls.common.feeds"
+>
+	<f:DynamicPage>
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="Dashboard Vendas"></Title>
+				</f:heading>
+				<f:content>
+					<OverflowToolbar>
+						<GenericTag text="RV" status="Success" design="StatusIconHidden" press="onPressOpenPopover">
+							<ObjectNumber emphasized="true" state="Success" unit="M"></ObjectNumber>
+						</GenericTag>
+					</OverflowToolbar>
+				</f:content>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader>
+				<f:content>
+					<layout:HorizontalLayout>
+						<layout:VerticalLayout>
+							<Text text="Vendas por Região / Tipo de Negócio / Produto (Milhões R$)" class="sapUiSmallMargin"></Text>
+							<FlexBox width="30rem" height="10rem" alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<chart:InteractiveLineChart points="{/VW_SalesRegion}" displayedPoints="8" precedingPoint="20">
+										<chart:points>
+											<chart:InteractiveLineChartPoint 
+												value="{path: 'Revenue', type: 'sap.ui.model.odata.type.Decimal', constraints:{ precision: 4, scale:2} }" 
+												label="{Region}"
+												color="{= ${Revenue} > 7000 ? 'Good' : ${Revenue} > 5000 ? 'Critical' : 'Error'}"	
+											></chart:InteractiveLineChartPoint>
+										</chart:points>
+									</chart:InteractiveLineChart>
+									<chart:InteractiveDonutChart segments="{/VW_SalesCategory}">
+										<chart:segments>
+											<chart:InteractiveDonutChartSegment 
+												label="{Category}"
+												value="{path: 'PCT_TO_TOTAL', type: 'sap.ui.model.odata.type.Decimal', constraints:{ precision: 4, scale:2} }" 
+												color="{= ${PCT_TO_TOTAL} > 50 ? 'Good' : ${PCT_TO_TOTAL} > 30 ? 'Critical' : 'Error'}"
+												displayedValue="{path: 'PCT_TO_TOTAL', type: 'sap.ui.model.odata.type.Decimal', constraints:{ precision: 4, scale:2} } %" 
+											></chart:InteractiveDonutChartSegment>
+										</chart:segments>
+									</chart:InteractiveDonutChart>
+									<chart:InteractiveBarChart bars="{/VW_TopRevenueProducts}" labelWidth="25%" displayedBars="3">
+										<chart:bars>
+											<chart:InteractiveBarChartBar 
+												label="{Product}"
+												value="{path: 'Revenue', type: 'sap.ui.model.odata.type.Decimal', constraints:{ precision: 4, scale:2} }" color="Error"
+											></chart:InteractiveBarChartBar>
+										</chart:bars>
+									</chart:InteractiveBarChart>
+								</items>
+							</FlexBox>
+						</layout:VerticalLayout>
+					</layout:HorizontalLayout>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<f:content>
+			<layout:Splitter width="100%" height="100%">
+				<layout:contentAreas>
+					<commons:ChartContainer autoAdjustHeight="false" showFullScreen="true" showPersonalization="false" title="Revenue">
+						<commons:content>
+							<commons:ChartContainerContent icon="sap-icon://line-chart">
+								<commons:content>
+									<viz:VizFrame 
+										width="100%" 
+										height="400px" 
+										uiConfig="{applicationSet: 'fiori'}"
+										vizType= 'line'
+										vizProperties="{plotArea: {drawingEffect: 'glossy'}, title: { text: 'Receitas X Despesas X Média Receita (milhões R$)'}, dataLabel: {visible: true, showTotal:true}}"	
+									>
+										<viz:dataset>
+											<data:FlattenedDataset data="{/VW_SalesReport}">
+												<data:dimensions>
+													<data:DimensionDefinition name="Mes" value="{Mes}"></data:DimensionDefinition>
+												</data:dimensions>
+												<data:measures>
+													<data:MeasureDefinition name="Receita" value="{TOT_REV}"></data:MeasureDefinition>
+													<data:MeasureDefinition name="Despesa" value="{TOT_COST}"></data:MeasureDefinition>
+													<data:MeasureDefinition name="Média" value="{AVG_REV}"></data:MeasureDefinition>
+												</data:measures>
+											</data:FlattenedDataset>
+										</viz:dataset>
+										<viz:feeds>
+											<feeds:FeedItem id="valueAxisFeed" type="Measure" values="Receita,Despesa,Média" uid="valueAxis" ></feeds:FeedItem>
+											<feeds:FeedItem id="categoryAxisFeed" type="Dimension" values="Mes" uid="categoryAxis" ></feeds:FeedItem>
+										</viz:feeds>
+									</viz:VizFrame>
+								</commons:content>
+							</commons:ChartContainerContent>
+						</commons:content>
+					</commons:ChartContainer>
+				</layout:contentAreas>
+			</layout:Splitter>
+		</f:content>
+		<f:footer></f:footer>
+	</f:DynamicPage>
+</mvc:View>
