@@ -1,9 +1,9 @@
 <h1 align="center">SAPUI5 - Fiori App - Dashboard 👋</h1>
 
 <p align="center">
-    <img alt="sapui5" src="https://img.shields.io/badge/SAP-UI5-brightgreen" />
-    <img alt="fiori" src="https://img.shields.io/badge/SAP-Fiori-brightgreen" />
-    <img alt="hana" src="https://img.shields.io/badge/onCloud-HANA-brightgreen" />
+    <img alt="sapui5" src="https://img.shields.io/badge/Fiori-SAPUI5-brightgreen" />
+    <img alt="fiori" src="https://img.shields.io/badge/SAP-HANA-brightgreen" />
+    <img alt="hana" src="https://img.shields.io/badge/onCloud-NEO-brightgreen" />
 </p>
 
 <p>
@@ -63,9 +63,9 @@ $ git clone https://github.com/DavidsonIzefler/SAPUI5-Fiori-Dashboard.git
 
  - After create HANA MDC Database
  - Run the scripts below:  
-1 -> Tabelas.txt to generate tables
-2 -> Views.txt to generate views
-3 -> Carga.txt to populate tables and views
+	1) Tabelas.txt to generate tables
+	2) Views.txt to generate views
+	3) Carga.txt to populate tables and views
 
 ## Then adding the profiles in the database at SYSTEM user
  - sap.hana.admin.roles::Administrator
